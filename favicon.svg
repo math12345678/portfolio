@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="fav-title">
+  <title id="fav-title">Smyan Reddy monogram</title>
+  <rect x="1" y="1" width="62" height="62" rx="2" fill="#FAF7F2" stroke="#D9D2C7" stroke-width="2"/>
+  <line x1="10" y1="50" x2="54" y2="50" stroke="#7A1F2B" stroke-width="1.5"/>
+  <text x="32" y="40" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="28" font-weight="600" fill="#3A1515">SR</text>
+</svg>

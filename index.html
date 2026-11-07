@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Smyan Reddy | Computational Biology Portfolio &amp; PENTA(mer) iGEM Proposal</title>
+  <meta name="description" content="Research portfolio of Smyan Reddy, tenth-grade computational biology researcher at Lambert High School, featuring the proposed PENTA(mer) iGEM 2027 congenital CMV saliva assay.">
+  <meta name="author" content="Smyan Reddy">
+
+  <link rel="canonical" href="https://math12345678.github.io/portfolio/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Smyan Reddy | Computational Biology Portfolio &amp; PENTA(mer) iGEM Proposal">
+  <meta property="og:description" content="Computational structural biology, genomics, modeling, and the PENTA(mer) iGEM 2027 proposal by Smyan Reddy.">
+  <meta property="og:url" content="https://math12345678.github.io/portfolio/">
+  <meta property="og:image" content="https://math12345678.github.io/portfolio/og-image.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Smyan Reddy | Computational Biology Portfolio &amp; PENTA(mer) iGEM Proposal">
+  <meta name="twitter:description" content="Computational structural biology, genomics, modeling, and the PENTA(mer) iGEM 2027 proposal by Smyan Reddy.">
+  <meta name="twitter:image" content="https://math12345678.github.io/portfolio/og-image.svg">
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Apply saved theme preference before first paint -->
+  <script>
+    (function () {
+      try {
+        var saved = window.localStorage.getItem("sr-theme");
+        if (saved === "light" || saved === "dark") {
+          document.documentElement.setAttribute("data-theme", saved);
+        }
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- Google Fonts with preconnect and non-blocking swap -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,500;0,600;0,700;1,400;1,500&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&amp;display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,500;0,600;0,700;1,400;1,500&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&amp;display=swap" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,500;0,600;0,700;1,400;1,500&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&amp;display=swap">
+  </noscript>
+
+  <!-- Critical above-the-fold styles -->
+  <style id="critical-css">
+    :root{--paper:#FAF7F2;--paper-2:#F1ECE3;--ink:#1B1414;--ink-2:#5A4F4F;--rule:#D9D2C7;--maroon:#3A1515;--accent:#7A1F2B;--max-width:1120px;--measure:62ch;--gutter:clamp(1.25rem,4vw,2.5rem)}
+    @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#14100F;--paper-2:#1E1817;--ink:#EDE6DC;--ink-2:#B9AEA2;--rule:#342B29;--maroon:#F4EDE4;--accent:#D98B93}}
+    :root[data-theme="dark"]{--paper:#14100F;--paper-2:#1E1817;--ink:#EDE6DC;--ink-2:#B9AEA2;--rule:#342B29;--maroon:#F4EDE4;--accent:#D98B93}
+    *,*::before,*::after{box-sizing:border-box}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:"Source Serif 4",Georgia,serif;font-size:1.125rem;line-height:1.65}
+    .container{width:100%;max-width:var(--max-width);margin-inline:auto;padding-inline:var(--gutter)}
+  </style>
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Structured data: Person (no phone number or street address) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Smyan Reddy",
+    "email": "mailto:mathlete.world@gmail.com",
+    "description": "Tenth-grade researcher, Lambert High School (Class of 2029), Suwanee, Georgia",
+    "affiliation": {
+      "@type": "EducationalOrganization",
+      "name": "Lambert High School"
+    },
+    "sameAs": [
+      "https://orcid.org/0009-0001-6068-7540",
+      "https://github.com/math12345678",
+      "https://www.linkedin.com/in/smyan-reddy/",
+      "https://independent.academia.edu/SmyanReddy",
+      "https://www.instagram.com/smyan.reddy/"
+    ],
+    "knowsAbout": [
+      "computational structural biology",
+      "molecular dynamics",
+      "genomics",
+      "synthetic biology",
+      "biostatistics"
+    ]
+  }
+  </script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="wordmark" href="#top" data-bind="person.name">Smyan Reddy</a>
+      <nav aria-label="Primary">
+        <button id="nav-toggle" class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav-list">Menu</button>
+        <ul id="site-nav-list" class="nav-list">
+          <li><a href="#work">Work</a></li>
+          <li><a href="#penta-mer">PENTA(mer)</a></li>
+          <li><a href="#research">Research</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#writing">Writing</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- 1) HERO -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container grid-12">
+        <div class="hero-main">
+          <p class="hero-kicker" data-bind="person.descriptor">Tenth-grade researcher, Lambert High School (Class of 2029), Suwanee, Georgia</p>
+          <h1 id="hero-heading" data-bind="hero.headline">Computational biology, built to be used.</h1>
+          <p class="hero-lead" data-bind="hero.description">Tenth-grade researcher working in structural biology, genomics, and modeling. I build software and simulations that answer real questions about proteins, viruses, and the human genome.</p>
+          <div class="hero-links">
+            <a class="text-action" href="#penta-mer">
+              <span data-bind="hero.primaryLinkLabel">Read the PENTA(mer) proposal</span>
+              <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </a>
+            <a class="text-action" href="#contact">
+              <span data-bind="hero.secondaryLinkLabel">Contact</span>
+            </a>
+          </div>
+        </div>
+
+        <!--
+          TODO: Optional portrait slot.
+          Place an authentic portrait photograph at /portrait.jpg and uncomment the container below when ready.
+          <figure class="hero-portrait">
+            <img src="portrait.jpg" alt="Portrait of Smyan Reddy">
+          </figure>
+        -->
+
+        <ul class="facts-row" aria-label="Academic and research summary">
+          <li>
+            <span class="fact-label small-caps" data-bind="hero.facts.0.label">Education</span>
+            <span class="fact-value" data-bind="hero.facts.0.value">Lambert High School, Class of 2029</span>
+          </li>
+          <li>
+            <span class="fact-label small-caps" data-bind="hero.facts.1.label">Academics</span>
+            <span class="fact-value" data-bind="hero.facts.1.value">GPA 4.3 | ACT 35/36</span>
+          </li>
+          <li>
+            <span class="fact-label small-caps" data-bind="hero.facts.2.label">Appointments</span>
+            <span class="fact-value" data-bind="hero.facts.2.value">Researcher at four institutions</span>
+            <span class="fact-sub" data-bind="hero.facts.2.detail">UCT, Rhodes University RUBi, Queen Mary University of London, L1 Therapeutics</span>
+          </li>
+          <li>
+            <span class="fact-label small-caps" data-bind="hero.facts.3.label">Identifier</span>
+            <span class="fact-value">
+              <a href="https://orcid.org/0009-0001-6068-7540" target="_blank" rel="noopener noreferrer" data-bind="hero.facts.3.value" data-bind-href="person.orcidUrl">ORCID 0009-0001-6068-7540</a>
+            </span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 2) FEATURED: PENTA(mer) (iGEM 2027 PROPOSAL) -->
+    <section id="penta-mer" class="section reveal-section" aria-labelledby="sec-pentamer-title">
+      <div class="container">
+        <div class="section-rule">
+          <div class="section-heading-group">
+            <span class="section-num">01</span>
+            <h2 id="sec-pentamer-title" class="section-title">Featured Proposal: PENTA(mer)</h2>
+          </div>
+        </div>
+
+        <div class="pentamer-header">
+          <p class="status-line" data-bind="pentamer.statusTag">Lambert High School iGEM Proposal</p>
+          <h3 class="pentamer-display-title" data-bind="pentamer.title">PENTA(mer): A Wash-Free Saliva Assay for Congenital Cytomegalovirus Screening</h3>
+        </div>
+
+        <div class="pentamer-spread">
+          <!-- Left column: verbatim abstract lines from written proposal -->
+          <div class="pentamer-prose">
+            <div class="prose-block">
+              <p data-bind="pentamer.abstractProblem">Congenital cytomegalovirus (cCMV) affects about 1 in 200 newborns in the United States, establishing itself as the primary non-genetic cause of sensorineural hearing loss. Most infected infants are asymptomatic at birth, causing standard screening to often miss children whose hearing loss appears later (Lutz et al., 2025; Fowler et al., 1997).</p>
+            </div>
+
+            <div class="prose-block">
+              <p data-bind="pentamer.abstractAssay">To help close this critical diagnostic gap, PENTA(mer) offers a wash-free saliva assay designed to spot the assembled human cytomegalovirus pentameric complex. This system consists of two single-chain variable fragments (scFvs) to bind epitopes on the complex, linking each arm to one half of a split TEM-1 &#946;-lactamase enzyme. When both fragments bind to the target, they reconstitute the enzyme to cleave nitrocefin, producing a rapid, visible color change.</p>
+            </div>
+
+            <div class="prose-block">
+              <p data-bind="pentamer.abstractReaderAndGoal">Furthermore, this system will measure color changes using a low-cost, open-source reader. Its software will incorporate signal processing, along with four computational models to predict binding kinetics, calibrate reader optics, test clinical feasibility, and verify binding geometry. Ultimately, PENTA(mer)&#8217;s goal is to bridge the gap between diagnostic technology and direct implementation, providing a low-cost screening tool to detect cCMV in infants.</p>
+            </div>
+          </div>
+
+          <!-- Right column: focus on the four integrated computational models -->
+          <div class="pentamer-models-panel">
+            <h4 class="prose-subhead" data-bind="pentamer.modelsHeading">Computational models</h4>
+            <p data-bind="pentamer.modelsIntro">Assay engineering and validation will be driven by four integrated computational models:</p>
+
+            <ol class="model-list">
+              <li>
+                <span class="model-code"><span data-bind="pentamer.models.0.num">1</span>.</span>
+                <span data-bind="pentamer.models.0.text">A kinetic sensor model that predicts signal output, optimal scFv working concentrations, and background tolerance based on binding kinetics</span>
+              </li>
+              <li>
+                <span class="model-code"><span data-bind="pentamer.models.1.num">2</span>.</span>
+                <span data-bind="pentamer.models.1.text">A photometric calibration model utilizing four-parameter logistic (4PL) curve fitting to define the exact limit of detection and detect potential high-dose hook effects</span>
+              </li>
+              <li>
+                <span class="model-code"><span data-bind="pentamer.models.2.num">3</span>.</span>
+                <span data-bind="pentamer.models.2.text">A clinical feasibility model mapping expected newborn saliva viral loads to target pentamer concentration thresholds</span>
+              </li>
+              <li>
+                <span class="model-code"><span data-bind="pentamer.models.3.num">4</span>.</span>
+                <span data-bind="pentamer.models.3.text">A structural molecular dynamics model (built from PDB entries 5VOB, 7T4S, and 7M22) evaluating co-binding geometry, split-enzyme orientation, and flexible dynamics on the pentamer framework</span>
+              </li>
+            </ol>
+
+            <p class="models-note" data-bind="pentamer.modelsFramework">The modeling framework provides testable predictions across three core areas: scFv working concentration, dose-response curve shape, and limit of detection. Models will be iteratively refined against experimental bench data. The feasibility model independently evaluates the assay by comparing expected viral loads against quantified limits of detection, while other molecular dynamics simulations evaluate structural feasibility. All code will be fully open-source.</p>
+
+            <!-- TODO: Add computational modeling code links and simulation outputs here when ready -->
+
+            <div class="pdb-row">
+              <span class="pdb-row-label">PDB entries:</span>
+              <ul class="pdb-list">
+                <li>
+                  <a class="pdb-link" href="https://www.rcsb.org/structure/5VOB" target="_blank" rel="noopener noreferrer" data-bind="pentamer.pdbStructures.0.id" data-bind-href="pentamer.pdbStructures.0.url">5VOB</a>
+                </li>
+                <li>
+                  <a class="pdb-link" href="https://www.rcsb.org/structure/7T4S" target="_blank" rel="noopener noreferrer" data-bind="pentamer.pdbStructures.1.id" data-bind-href="pentamer.pdbStructures.1.url">7T4S</a>
+                </li>
+                <li>
+                  <a class="pdb-link" href="https://www.rcsb.org/structure/7M22" target="_blank" rel="noopener noreferrer" data-bind="pentamer.pdbStructures.2.id" data-bind-href="pentamer.pdbStructures.2.url">7M22</a>
+                </li>
+              </ul>
+            </div>
+
+            <p class="pentamer-brief-cta">
+              <a class="text-action" href="penta-mer/">
+                <span>Read the full PENTA(mer) proposal</span>
+                <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+                  <path d="M3 8h10M9 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3) RESEARCH (the "Work" section) -->
+    <section id="work" class="section reveal-section" aria-labelledby="sec-work-title">
+      <div class="container">
+        <div class="section-rule">
+          <div class="section-heading-group">
+            <span class="section-num">02</span>
+            <h2 id="sec-work-title" class="section-title">Work &amp; Research Appointments</h2>
+          </div>
+        </div>
+
+        <ul class="work-list">
+          <!-- a) RUBi, Rhodes University -->
+          <li class="work-entry">
+            <div class="work-head">
+              <strong class="work-role" data-bind="work.0.role">Computational Structural Biology Researcher</strong>,
+              <em class="work-org" data-bind="work.0.org">Research Unit in Bioinformatics (RUBi), Rhodes University, Makhanda, South Africa (remote)</em>
+            </div>
+            <div class="work-dates" data-bind="work.0.dates">07/2026 to present</div>
+            <div class="work-body">
+              <ul class="work-bullets">
+                <li data-bind="work.0.bullets.0">Lead computational analyst on a structural bioinformatics study of clinically relevant protein variants; first author on the resulting manuscript, in preparation.</li>
+                <li data-bind="work.0.bullets.1">Designed the study&#8217;s statistical robustness framework and ran large-scale all-atom molecular dynamics campaigns on a national high-performance computing cluster.</li>
+                <li data-bind="work.0.bullets.2">Integrated multiple independent structural and network readouts into a single comparative analysis pipeline, and diagnosed and corrected errors in the inherited codebase.</li>
+              </ul>
+            </div>
+
+            <div class="entry-figures">
+              <figure class="portfolio-figure">
+                <div class="figure-media">
+                  <img src="assets/figures/cyp2b6-rmsd.webp" width="1568" height="590" loading="lazy" decoding="async" alt="Backbone RMSD trajectories and variant delta-RMSD comparisons from 500-nanosecond CYP2B6 molecular dynamics simulations">
+                </div>
+                <figcaption data-bind="work.0.figures.0">Simulation of CYP2B6 variants over 500 nanoseconds and variations in Root Mean Square Deviation (RMSD) of the enzyme.</figcaption>
+              </figure>
+
+              <div class="figure-pair">
+                <figure class="portfolio-figure">
+                  <div class="figure-media">
+                    <img src="assets/figures/variant-zscore-heatmap.webp" width="1232" height="971" loading="lazy" decoding="async" alt="Z-score heatmap comparing structural, pocket, and tunnel metrics across CYP2B6 variants relative to wild type">
+                  </div>
+                  <figcaption data-bind="work.0.figures.1">Heatmap of various metrics using the z-score pipeline to compare the variants to the wild type.</figcaption>
+                </figure>
+
+                <figure class="portfolio-figure">
+                  <div class="figure-media">
+                    <img src="assets/figures/r140q-pocket.webp" width="1200" height="1127" loading="lazy" decoding="async" alt="Three-dimensional ribbon structure highlighting the R140Q pocket location">
+                  </div>
+                  <figcaption data-bind="work.0.figures.2">R140Q pocket location.</figcaption>
+                </figure>
+              </div>
+            </div>
+          </li>
+
+          <!-- b) L1 Therapeutics -->
+          <li class="work-entry">
+            <div class="work-head">
+              <strong class="work-role" data-bind="work.1.role">Computational Biologist and AI Researcher</strong>,
+              <em class="work-org" data-bind="work.1.org">L1 Therapeutics, San Francisco, California (remote)</em>
+            </div>
+            <div class="work-dates" data-bind="work.1.dates">07/2026 to present</div>
+            <div class="work-body">
+              <ul class="work-bullets">
+                <li data-bind="work.1.bullets.0">Co-developed retrotransposon-miner, open-source software that detects LINE-1 retrotransposon insertions from whole-genome sequencing, built from scratch because existing academic tools are unmaintained or restrictively licensed.</li>
+                <li data-bind="work.1.bullets.1">Benchmarked against the 1000 Genomes Project reference callset and exceeded it on both precision and recall using Illumina short reads alone, where the consortium used both Illumina and Oxford Nanopore.</li>
+                <li data-bind="work.1.bullets.2">Reduced runtime to approximately two hours per genome on genomes exceeding 100 GB, faster than published state-of-the-art academic tools.</li>
+                <li data-bind="work.1.bullets.3">Performed manual IGV adjudication of candidate insertions to separate true from false calls, and compared short-read against long-read detection sensitivity.</li>
+              </ul>
+              <div class="entry-links">
+                <a class="entry-link" href="https://github.com/L1-Therapeutics/retrotransposon-miner" target="_blank" rel="noopener noreferrer" data-bind-href="work.1.repoUrl">
+                  <span>retrotransposon-miner (GitHub)</span>
+                  <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 12L12 4M6 4h6v6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                </a>
+                <a class="entry-link" href="https://l1tx.com/" target="_blank" rel="noopener noreferrer" data-bind-href="work.1.orgUrl">
+                  <span>L1 Therapeutics website</span>
+                  <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 12L12 4M6 4h6v6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                </a>
+              </div>
+            </div>
+
+            <div class="entry-figures">
+              <figure class="portfolio-figure">
+                <div class="figure-media">
+                  <img src="assets/figures/l1-retrotransposon.webp" width="1800" height="645" loading="lazy" decoding="async" alt="Three-panel plot of Alu, LINE-1, and SVA sense and antisense enrichment, Alu age classes, and same-orientation fractions">
+                </div>
+                <figcaption data-bind="work.1.figures.0">L1 Therapeutics retrotransposon work.</figcaption>
+              </figure>
+            </div>
+          </li>
+
+          <!-- c) UCT Immunology -->
+          <li class="work-entry">
+            <div class="work-head">
+              <strong class="work-role" data-bind="work.2.role">Biomedical Researcher</strong>,
+              <em class="work-org" data-bind="work.2.org">University of Cape Town, Department of Immunology and Institute of Infectious Disease, Rondebosch, South Africa</em>
+            </div>
+            <div class="work-dates" data-bind="work.2.dates">02/2026 to present</div>
+            <div class="work-body">
+              <ul class="work-bullets">
+                <li data-bind="work.2.bullets.0">Molecular dynamics work in cancer immunotherapy, studying how engineered mutations alter the behavior of a therapeutic protein.</li>
+                <li data-bind="work.2.bullets.1">Computational immunology project, applying modeling and data analysis to adaptive immune system research.</li>
+              </ul>
+            </div>
+
+            <div class="entry-figures">
+              <figure class="portfolio-figure portfolio-figure--medium">
+                <div class="figure-media">
+                  <img src="assets/figures/granzyme-b-rmsd.webp" width="1600" height="1238" loading="lazy" decoding="async" alt="Granzyme B holo and apo protease alpha-carbon RMSD trajectories, peptide RMSD, and RMSD density distributions">
+                </div>
+                <figcaption data-bind="work.2.figures.0">Granzyme B project RMSD.</figcaption>
+              </figure>
+
+              <figure class="portfolio-figure">
+                <div class="figure-media">
+                  <img src="assets/figures/bcell-junction-sharing.webp" width="1800" height="621" loading="lazy" decoding="async" alt="Generation probability by sharing level, observed against expected donor sharing, and 10-donor sharing spectrum in B-cell repertoires">
+                </div>
+                <figcaption data-bind="work.2.figures.1">Donor sharing of heavy chain junctions in B-cell repertoires.</figcaption>
+              </figure>
+            </div>
+          </li>
+
+          <!-- d) UCT Virology -->
+          <li class="work-entry">
+            <div class="work-head">
+              <strong class="work-role" data-bind="work.3.role">Virology Researcher</strong>,
+              <em class="work-org" data-bind="work.3.org">University of Cape Town, Research and Innovation</em>
+            </div>
+            <div class="work-dates" data-bind="work.3.dates">02/2026 to present</div>
+            <div class="work-body">
+              <ul class="work-bullets">
+                <li data-bind="work.3.bullets.0">Reproducing conserved coronavirus recombination analyses using RDP5 and OpenRDP, including debugging the open-source toolchain against modern NumPy.</li>
+                <li data-bind="work.3.bullets.1">Analyzing viral sequence data to test how recombination constrains or promotes viral fitness.</li>
+              </ul>
+            </div>
+
+            <div class="entry-figures">
+              <figure class="portfolio-figure">
+                <div class="figure-media figure-media--flush">
+                  <img src="assets/figures/sarscov2-recombination.webp" width="937" height="344" loading="lazy" decoding="async" alt="Recombination breakpoint distribution per 200-nucleotide window across SARS-CoV-2 genome alignments">
+                </div>
+                <figcaption data-bind="work.3.figures.0">Recombination of SARS-CoV-2 genomes.</figcaption>
+              </figure>
+
+              <figure class="portfolio-figure">
+                <div class="figure-media">
+                  <img src="assets/figures/breakpoint-ai-model.webp" width="1800" height="626" loading="lazy" decoding="async" alt="Breakpoint sensitivity heatmap, simulation detection power curves, and median breakpoint localisation error">
+                </div>
+                <figcaption data-bind="work.3.figures.1">AI model prediction of breakpoint locations.</figcaption>
+              </figure>
+            </div>
+          </li>
+
+          <!-- e) Queen Mary University of London -->
+          <li class="work-entry">
+            <div class="work-head">
+              <strong class="work-role" data-bind="work.4.role">Statistical Genetics Researcher</strong>,
+              <em class="work-org" data-bind="work.4.org">Queen Mary University of London, London, England (remote)</em>
+            </div>
+            <div class="work-dates" data-bind="work.4.dates">10/2026 to present</div>
+            <div class="work-body">
+              <ul class="work-bullets">
+                <li data-bind="work.4.bullets.0">Running genome-wide association analysis of anthropometric traits on Million Veteran Program summary statistics.</li>
+                <li data-bind="work.4.bullets.1">Responsible for GWAS quality control, post-GWAS analysis, and Genomic Structural Equation Modeling across traits.</li>
+              </ul>
+            </div>
+          </li>
+
+          <!-- f) Genoxus -->
+          <li class="work-entry">
+            <div class="work-head">
+              <strong class="work-role" data-bind="work.5.role">Genomic Bioinformatics Intern</strong>,
+              <em class="work-org" data-bind="work.5.org">Genoxus, San Diego, California (remote)</em>
+            </div>
+            <div class="work-dates" data-bind="work.5.dates">10/2026 to present</div>
+            <div class="work-body">
+              <p data-bind="work.5.summary">Converting raw sequencing data into structured, clinically relevant genomic reports as part of a clinical genomics workflow.</p>
+              <div class="entry-links">
+                <a class="entry-link" href="https://genoxuslabs.com/" target="_blank" rel="noopener noreferrer" data-bind-href="work.5.orgUrl">
+                  <span>Genoxus website</span>
+                  <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 12L12 4M6 4h6v6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <!-- g) BreakSight, Inc. -->
+          <li class="work-entry">
+            <div class="work-head">
+              <strong class="work-role" data-bind="work.6.role">Research Intern</strong>,
+              <em class="work-org" data-bind="work.6.org">BreakSight, Inc., Allentown, Pennsylvania</em>
+            </div>
+            <div class="work-dates" data-bind="work.6.dates">10/2026 to present</div>
+            <div class="work-body">
+              <p data-bind="work.6.summary">Contributing to the design, development, testing, and evaluation of genetic software under the guidance of company engineers.</p>
+              <div class="entry-links">
+                <a class="entry-link" href="https://www.breaksightdna.com/" target="_blank" rel="noopener noreferrer" data-bind-href="work.6.orgUrl">
+                  <span>BreakSight website</span>
+                  <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 12L12 4M6 4h6v6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                </a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 4) SELECTED PROJECTS -->
+    <section id="research" class="section reveal-section" aria-labelledby="sec-projects-title">
+      <div class="container">
+        <div class="section-rule">
+          <div class="section-heading-group">
+            <span class="section-num">03</span>
+            <h2 id="sec-projects-title" class="section-title">Selected Research &amp; Engineering Projects</h2>
+          </div>
+        </div>
+
+        <div class="project-rows">
+          <!-- Hantavirus -->
+          <article class="project-row">
+            <h3 class="project-title" data-bind="projects.0.title">Stochastic modeling of hantavirus transmission</h3>
+            <span class="project-dates" data-bind="projects.0.dates">05/2026 to present</span>
+            <div class="project-body">
+              <!-- TODO: Link coming for hantavirus modeling repository -->
+              <p data-bind="projects.0.description">Regional outbreak probability and mortality burden modeling using ANOVA with Tukey HSD, Poisson generalized linear models, and bootstrap confidence intervals. Identified viral strain as the dominant predictor of case fatality rate (F = 78.2, p &lt; 0.0001), with the Pacific region highest at 44.0%. Produced forest plots and choropleth risk maps.</p>
+            </div>
+          </article>
+
+          <!-- TrialTwin -->
+          <article class="project-row">
+            <h3 class="project-title" data-bind="projects.1.title">TrialTwin</h3>
+            <span class="project-dates" data-bind="projects.1.dates">05/2026 to present</span>
+            <div class="project-body">
+              <!-- TODO: Link coming for TrialTwin repository and demo -->
+              <p data-bind="projects.1.description">Clinical trial pre-recruitment simulator running 10,000 Monte Carlo simulations to project enrollment across 43 countries and 20 diseases, flagging representation gaps via the Representation Quotient and Representation Equity Score and recommending sites to correct enrollment bias. FastAPI and NumPy backend with a Next.js frontend; rules-based and CPU-bound with no LLM in the critical path, streaming results in 5 to 15 seconds; static JSON priors and vectorized compute hold infrastructure cost near $0.02 per run. Won the WaveHack hackathon (05/2026), sponsored by Hack Club and Major League Hacking.</p>
+            </div>
+
+            <div class="entry-figures">
+              <figure class="portfolio-figure portfolio-figure--medium">
+                <div class="figure-media">
+                  <img src="assets/figures/nccn-race-enrollment.webp" width="1168" height="710" loading="lazy" decoding="async" alt="Bar chart comparing weighted clinical trial enrollment percentages against SEER US incidence across racial and ethnic groups in NCCN Kidney Cancer Guidelines">
+                </div>
+                <figcaption data-bind="projects.1.figureCaption">Representation of races in NCCN Kidney Cancer Guidelines.</figcaption>
+              </figure>
+            </div>
+          </article>
+
+          <!-- MicroTract -->
+          <article class="project-row">
+            <h3 class="project-title" data-bind="projects.2.title">MicroTract</h3>
+            <span class="project-dates" data-bind="projects.2.dates">08/2025 to 12/2025</span>
+            <div class="project-body">
+              <p data-bind="projects.2.description">Tested five biodegradable oral capsule formulations varying chitosan, lecithin and citric acid ratios for microplastic fiber capture in a simulated digestive system. A balanced 33% ternary mixture achieved the highest removal efficiency at 23.04%, indicating synergy between chitosan binding, lecithin emulsification and citric acid pH modulation.</p>
+            </div>
+          </article>
+
+          <!-- NanoSilver -->
+          <article class="project-row">
+            <h3 class="project-title" data-bind="projects.3.title">NanoSilver</h3>
+            <span class="project-dates" data-bind="projects.3.dates">08/2024 to 01/2025</span>
+            <div class="project-body">
+              <p data-bind="projects.3.description">Tested whether gelatin films embedded with silver nanoparticles suppress <em>Phytophthora</em> infection in potatoes. Reported a negative result: experimental samples developed more mold than controls, attributed to excess coating moisture overwhelming sparse nanoparticle distribution, with derived design implications for nanoparticle concentration, delivery and moisture control.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5) SKILLS -->
+    <section id="skills" class="section reveal-section" aria-labelledby="sec-skills-title">
+      <div class="container">
+        <div class="section-rule">
+          <div class="section-heading-group">
+            <span class="section-num">04</span>
+            <h2 id="sec-skills-title" class="section-title">Technical Skills</h2>
+          </div>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-cell">
+            <h3 class="skill-heading" data-bind="skills.0.category">Molecular dynamics and structural biology</h3>
+            <p class="skill-items" data-bind="skills.0.items">GROMACS, AmberTools and cpptraj, AMBER ff14SB and ff99SB-ILDN force fields, TIP3P and SPC/E solvent models, MODELLER homology modeling, MD-TASK dynamic residue networks, MDAnalysis, MDpocket, CAVER 3.0, DSSP, PCA and dynamic cross-correlation, RMSD and RMSF analysis, HPC cluster workflows (CHPC Lengau).</p>
+          </div>
+          <div class="skill-cell">
+            <h3 class="skill-heading" data-bind="skills.1.category">Genomics and bioinformatics</h3>
+            <p class="skill-items" data-bind="skills.1.items">Whole-genome sequencing analysis, retrotransposon insertion detection, Illumina short-read against Oxford Nanopore long-read comparison, IGV manual validation, BLAST and BLASTN, CLUSTAL, ViennaRNA, RefSeq, GWAS and GWAS quality control, post-GWAS analysis, Genomic Structural Equation Modeling, recombination detection with RDP5 and OpenRDP.</p>
+          </div>
+          <div class="skill-cell">
+            <h3 class="skill-heading" data-bind="skills.2.category">Synthetic biology</h3>
+            <p class="skill-items" data-bind="skills.2.items">Plasmid and construct design, quorum-sensing circuits, reporter systems, toxin-antitoxin kill switches, siRNA and dsRNA design.</p>
+          </div>
+          <div class="skill-cell">
+            <h3 class="skill-heading" data-bind="skills.3.category">Programming and statistics</h3>
+            <p class="skill-items" data-bind="skills.3.items">Python (NumPy, Pandas, SciPy, FastAPI, OpenCV), R, SQL, JavaScript and TypeScript with Next.js, Git and GitHub, AWS; ANOVA with Tukey HSD, Poisson generalized linear models, bootstrap confidence intervals, Monte Carlo simulation, meta-analysis and heterogeneity assessment, systematic review design, PICO framework, PubMed boolean search strategy, forest plots and choropleth mapping.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6) WRITING -->
+    <section id="writing" class="section reveal-section" aria-labelledby="sec-writing-title">
+      <div class="container">
+        <div class="section-rule">
+          <div class="section-heading-group">
+            <span class="section-num">05</span>
+            <h2 id="sec-writing-title" class="section-title">Writing &amp; Preprints</h2>
+          </div>
+        </div>
+
+        <ul class="ruled-list">
+          <li class="ruled-item">
+            <div class="item-main">
+              <div>
+                <span class="pub-title">&#8220;<span data-bind="writing.0.title">Degradation of viral NS5 polymerase mRNA from mosquito-borne diseases with engineered RNAi</span>&#8221;</span>,
+                <span class="pub-venue" data-bind="writing.0.venue">BioTreks</span>
+              </div>
+              <p class="pub-summary" data-bind="writing.0.summary">We aim to engineer a Wolbachia-compatible plasmid that produces dsRNA targeting a conserved NS5 region shared by Zika, dengue, and yellow fever viruses. After validating expression and RNA binding in <em>Saccharomyces cerevisiae</em>, the system could be transferred to an RNAi-capable host to evaluate viral suppression as a sustainable alternative to insecticides.</p>
+              <div class="entry-links">
+                <a class="entry-link" href="https://biotreks.org/e202633/" target="_blank" rel="noopener noreferrer" data-bind-href="writing.0.url">
+                  <span>Read paper (BioTreks)</span>
+                  <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 12L12 4M6 4h6v6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                </a>
+              </div>
+            </div>
+            <div class="right-meta" data-bind="writing.0.date">10/2026</div>
+          </li>
+
+          <li class="ruled-item">
+            <div class="item-main">
+              <div>
+                <span class="pub-title">&#8220;<span data-bind="writing.1.title">Seed-Region-Focused Validation of a Sindbis Virus-Specific siRNA: Insights into Off-Target Minimization and Host-Specific RNAi Constraints</span>&#8221;</span>,
+                <span class="pub-venue" data-bind="writing.1.venue">Zenodo</span>
+              </div>
+              <p class="pub-summary" data-bind="writing.1.summary">A 21-nucleotide siRNA targeting Sindbis virus was computationally validated as highly specific with minimal human off-target risk. However, experimental results showed limited antiviral activity, highlighting the weakness of classical RNAi in most mammalian cells and the importance of cell type and host context.</p>
+              <div class="entry-links">
+                <a class="entry-link" href="https://zenodo.org/records/23548457" target="_blank" rel="noopener noreferrer" data-bind-href="writing.1.url">
+                  <span>Read paper (Zenodo)</span>
+                  <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 12L12 4M6 4h6v6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                </a>
+              </div>
+            </div>
+            <div class="right-meta" data-bind="writing.1.date">10/2026</div>
+
+            <div class="entry-figures">
+              <figure class="portfolio-figure portfolio-figure--compact">
+                <div class="figure-media figure-media--dark">
+                  <img src="assets/figures/sindbis-protein.webp" width="920" height="710" loading="lazy" decoding="async" alt="Three-dimensional ribbon representation of Sindbis virus protein rendered in UCSF ChimeraX">
+                </div>
+                <figcaption data-bind="writing.1.figureCaption">Sindbis virus protein (UCSF ChimeraX).</figcaption>
+              </figure>
+            </div>
+          </li>
+
+          <li class="ruled-item">
+            <div class="item-main">
+              <div>
+                <span class="pub-title">&#8220;<span data-bind="writing.2.title">Gene-relative distribution of polymorphic retrotransposon insertions in ten human genomes</span>&#8221;</span>,
+                <span class="pub-venue" data-bind="writing.2.venue">Zenodo</span>
+              </div>
+              <p class="pub-summary" data-bind="writing.2.summary">Retrotransposon insertions are depleted in exons and show strand-specific patterns near exon boundaries. Although Alu elements often avoid the sense orientation, transcript attenuation alone cannot explain this pattern, highlighting the need to consider both distance and orientation when annotating their effects.</p>
+              <div class="entry-links">
+                <a class="entry-link" href="https://zenodo.org/records/23520972" target="_blank" rel="noopener noreferrer" data-bind-href="writing.2.url">
+                  <span>Read paper (Zenodo)</span>
+                  <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 12L12 4M6 4h6v6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                </a>
+                <a class="entry-link" href="https://math12345678.github.io/retrotransposon-gene-distribution/" target="_blank" rel="noopener noreferrer" data-bind-href="writing.2.pageUrl">
+                  <span>Project page (GitHub)</span>
+                  <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 12L12 4M6 4h6v6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                </a>
+              </div>
+            </div>
+            <div class="right-meta" data-bind="writing.2.date">10/2026</div>
+          </li>
+
+          <li class="ruled-item">
+            <div class="item-main">
+              <div>
+                <span class="pub-title">In preparation:</span>
+                <span data-bind="writing.3.descriptor">First-author molecular dynamics manuscript (RUBi, Rhodes University)</span>.
+              </div>
+            </div>
+            <div class="right-meta" data-bind="writing.3.date">In preparation</div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 7) LEADERSHIP IN SCIENCE -->
+    <section id="leadership" class="section reveal-section" aria-labelledby="sec-leadership-title">
+      <div class="container">
+        <div class="section-rule">
+          <div class="section-heading-group">
+            <span class="section-num">06</span>
+            <h2 id="sec-leadership-title" class="section-title">Leadership in Science</h2>
+          </div>
+        </div>
+
+        <ul class="ruled-list">
+          <li class="ruled-item">
+            <div class="item-main">
+              <div>
+                <strong class="pub-title" data-bind="leadership.0.org">National Student Research Institution (NSRI)</strong>,
+                <em class="pub-venue" data-bind="leadership.0.role">Chief Operating Officer</em>
+              </div>
+              <p class="pub-summary" data-bind="leadership.0.description">Promoted from Associate to COO in five months at a student research network of 16,000+ researchers and 20,000+ followers. Directs operations across partnerships, programming and content, including the Research Weekly newsletter and the Global Research Challenge. Brought 18 partner organizations into NSRI. Built a 22-lecture introductory research methodology course teaching beginners to design and conduct research.</p>
+              <div class="entry-links">
+                <a class="entry-link" href="https://nsri.world/" target="_blank" rel="noopener noreferrer" data-bind-href="leadership.0.url">
+                  <span>NSRI website</span>
+                  <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 12L12 4M6 4h6v6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                </a>
+              </div>
+            </div>
+            <div class="right-meta" data-bind="leadership.0.dates">01/2026 to present</div>
+          </li>
+
+          <li class="ruled-item">
+            <div class="item-main">
+              <div>
+                <strong class="pub-title" data-bind="leadership.1.org">Caterva</strong>,
+                <em class="pub-venue" data-bind="leadership.1.role">Chief Executive Officer</em>
+              </div>
+              <p class="pub-summary" data-bind="leadership.1.description">Building infrastructure for scientific simulation, aimed at labs without supercomputing access.</p>
+              <div class="entry-links">
+                <a class="entry-link" href="https://github.com/math12345678/caterva" target="_blank" rel="noopener noreferrer" data-bind-href="leadership.1.url">
+                  <span>Caterva (GitHub)</span>
+                  <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 12L12 4M6 4h6v6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                </a>
+              </div>
+            </div>
+            <div class="right-meta" data-bind="leadership.1.dates">07/2026 to present</div>
+          </li>
+
+          <li class="ruled-item">
+            <div class="item-main">
+              <div>
+                <strong class="pub-title" data-bind="leadership.2.org">Sustain</strong>,
+                <em class="pub-venue" data-bind="leadership.2.role">Founder</em>
+              </div>
+              <p class="pub-summary" data-bind="leadership.2.description">Multi-platform initiative on global health equity and equitable access to biotechnology in the Global South, spanning a podcast, a book and a masterclass.</p>
+              <div class="entry-links">
+                <a class="entry-link" href="https://9pxqxqxe.mule.page/" target="_blank" rel="noopener noreferrer" data-bind-href="leadership.2.url">
+                  <span>Sustain website</span>
+                  <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 12L12 4M6 4h6v6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                </a>
+              </div>
+            </div>
+            <div class="right-meta" data-bind="leadership.2.dates">07/2026 to present</div>
+          </li>
+
+          <li class="ruled-item">
+            <div class="item-main">
+              <div>
+                <strong class="pub-title" data-bind="leadership.3.org">AI in STEM</strong>,
+                <em class="pub-venue" data-bind="leadership.3.role">AI in Healthcare Curriculum Lead</em>
+              </div>
+              <p class="pub-summary" data-bind="leadership.3.description">Authored curriculum modules including AI in Biotechnology, AI Applications in Python and AI in the Workforce, covering diagnostics, drug discovery and medical data analysis. Gold Volunteering Award.</p>
+              <div class="entry-links">
+                <a class="entry-link" href="https://ai-in-stem.org/" target="_blank" rel="noopener noreferrer" data-bind-href="leadership.3.url">
+                  <span>AI in STEM website</span>
+                  <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 12L12 4M6 4h6v6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                </a>
+              </div>
+            </div>
+            <div class="right-meta" data-bind="leadership.3.dates">08/2025 to 03/2026</div>
+          </li>
+        </ul>
+
+        <div class="concerto-block">
+          <p class="concerto-note" data-bind="leadershipNote">Also founded Concerto, a student-run program delivering free live music to older adults (175 student volunteers, 15 chapters across four countries).</p>
+          <div class="entry-links">
+            <a class="entry-link" href="https://concerto-website.vercel.app/" target="_blank" rel="noopener noreferrer" data-bind-href="concertoUrl">
+              <span>Concerto website</span>
+              <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 12L12 4M6 4h6v6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8) RECOGNITION -->
+    <section id="recognition" class="section reveal-section" aria-labelledby="sec-recognition-title">
+      <div class="container">
+        <div class="section-rule">
+          <div class="section-heading-group">
+            <span class="section-num">07</span>
+            <h2 id="sec-recognition-title" class="section-title">Recognition</h2>
+          </div>
+        </div>
+
+        <ul class="compact-list">
+          <li class="compact-row">
+            <span>
+              <strong data-bind="recognition.0.title">Best Research Award 2026</strong>,
+              <em class="pub-venue" data-bind="recognition.0.org">International Journal of Science and Innovation</em>
+            </span>
+            <span class="right-meta" data-bind="recognition.0.date">04/2026</span>
+          </li>
+          <li class="compact-row">
+            <span>
+              <strong data-bind="recognition.1.title">Outstanding Young Researcher Award</strong>,
+              <em class="pub-venue" data-bind="recognition.1.org">International Research Symposium</em>
+            </span>
+            <span class="right-meta" data-bind="recognition.1.date">07/2026</span>
+          </li>
+          <li class="compact-row">
+            <span data-bind="recognition.2.title">1st Place, Atlanta Hackathon, Divergent Teams; qualified for international competition in Seattle</span>
+            <span class="right-meta" data-bind="recognition.2.date">05/2026</span>
+          </li>
+          <li class="compact-row">
+            <span data-bind="recognition.3.title">1st Place, WaveHack Hackathon</span>
+            <span class="right-meta" data-bind="recognition.3.date">05/2026</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 9) TRAINING -->
+    <section id="training" class="section reveal-section" aria-labelledby="sec-training-title">
+      <div class="container">
+        <div class="section-rule">
+          <div class="section-heading-group">
+            <span class="section-num">08</span>
+            <h2 id="sec-training-title" class="section-title">Training &amp; Seminar</h2>
+          </div>
+        </div>
+
+        <ul class="training-list">
+          <li data-bind="training.0">Introduction to Bioinformatics Skills, University at Albany (July 2026)</li>
+          <li data-bind="training.1">2026 RNA Institute High School Bioinformatics Summer Camp, University at Albany (August 2026)</li>
+          <li data-bind="training.2">Certified Entry-Level Python Programmer (PCEP-30-02), Python Institute (February 2023)</li>
+          <li data-bind="training.3">Introduction to Machine Learning, Kaggle (July 2025)</li>
+          <li data-bind="training.4">Member, Lambert High School iGEM Seminar Team</li>
+        </ul>
+
+        <div class="training-figure-wrap">
+          <figure class="portfolio-figure portfolio-figure--poster">
+            <div class="figure-media figure-media--flush">
+              <img src="assets/figures/rna-day-poster.webp" width="1800" height="1350" loading="lazy" decoding="async" alt="Conference research poster on transcriptomic and splicing signatures in spinocerebellar ataxia type 1 presented at the RNA Day Conference 2026 at University at Albany">
+            </div>
+            <figcaption data-bind="trainingFigureCaption">Poster used at the RNA Day Conference 2026 at University at Albany. All plots made using R and ggplot2.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10) RESEARCH INTERESTS -->
+    <section id="interests" class="section reveal-section" aria-labelledby="sec-interests-title">
+      <div class="container">
+        <div class="section-rule">
+          <div class="section-heading-group">
+            <span class="section-num">09</span>
+            <h2 id="sec-interests-title" class="section-title">Research Interests</h2>
+          </div>
+        </div>
+
+        <div class="interests-spread">
+          <p class="interests-statement" data-bind="researchInterests">Structural and computational immunology. Molecular dynamics of therapeutic and drug-metabolizing proteins, allosteric mechanism in protein variants, retrotransposon and viral genome analysis, statistical genetics, and representation bias in clinical evidence.</p>
+
+          <figure class="portfolio-figure">
+            <div class="figure-media figure-media--dark">
+              <img src="assets/figures/mrsa-binding-site.webp" width="1200" height="1038" loading="lazy" decoding="async" alt="Three-dimensional molecular structure of active-site residues and bound ligand in the MRSA binding site project">
+            </div>
+            <figcaption data-bind="mrsaFigureCaption">Binding site in MRSA project.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11) CONTACT -->
+    <section id="contact" class="section reveal-section" aria-labelledby="sec-contact-title">
+      <div class="container">
+        <div class="section-rule">
+          <div class="section-heading-group">
+            <span class="section-num">10</span>
+            <h2 class="section-title">Correspondence</h2>
+          </div>
+        </div>
+
+        <div class="contact-box">
+          <h3 id="sec-contact-title" class="contact-heading" data-bind="contact.heading">Contact</h3>
+          <p data-bind="contact.sentence">For iGEM, research collaboration, or questions about PENTA(mer), email me.</p>
+
+          <div class="email-row">
+            <a class="email-link" href="mailto:mathlete.world@gmail.com" data-bind="person.email" data-bind-href="person.email" data-href-prefix="mailto:">mathlete.world@gmail.com</a>
+            <button id="copy-email-btn" class="copy-btn" type="button">Copy email</button>
+            <span id="copy-status" class="copy-status" role="status" aria-live="polite"></span>
+          </div>
+
+          <ul class="profile-links">
+            <li>
+              <a href="https://github.com/math12345678" target="_blank" rel="noopener noreferrer" data-bind-href="person.githubUrl">GitHub</a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/smyan-reddy/" target="_blank" rel="noopener noreferrer" data-bind-href="person.linkedinUrl">LinkedIn</a>
+            </li>
+            <li>
+              <a href="https://orcid.org/0009-0001-6068-7540" target="_blank" rel="noopener noreferrer" data-bind-href="person.orcidUrl">ORCID (0009-0001-6068-7540)</a>
+            </li>
+            <li>
+              <a href="https://independent.academia.edu/SmyanReddy" target="_blank" rel="noopener noreferrer" data-bind-href="person.academiaUrl">Academia.edu</a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/smyan.reddy/" target="_blank" rel="noopener noreferrer" data-bind-href="person.instagramUrl">Instagram</a>
+            </li>
+            <li>
+              <!-- TODO: Upload a public version of the CV at smyan-reddy-cv.pdf with phone number and reference contacts removed -->
+              <a href="smyan-reddy-cv.pdf" data-bind-href="person.cvPath">Download CV (PDF)</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span data-bind="person.locationAndUpdated">Smyan Reddy, Suwanee, Georgia. Last updated November 2026.</span>
+      <div class="theme-switch" role="group" aria-label="Color theme">
+        <button class="theme-btn" type="button" data-theme-choice="light" aria-pressed="false">Light</button>
+        <span aria-hidden="true">/</span>
+        <button class="theme-btn" type="button" data-theme-choice="dark" aria-pressed="false">Dark</button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="content.js" defer></script>
+  <script src="main.js" defer></script>
+</body>
+</html>

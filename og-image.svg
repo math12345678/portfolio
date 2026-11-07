@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-labelledby="og-title og-desc">
+  <title id="og-title">Smyan Reddy | Computational Biology Portfolio and PENTA(mer) iGEM Proposal</title>
+  <desc id="og-desc">Typographic preview card for Smyan Reddy's research portfolio and the PENTA(mer) iGEM 2027 proposal.</desc>
+  <rect width="1200" height="630" fill="#FAF7F2"/>
+  <rect x="48" y="48" width="1104" height="534" fill="none" stroke="#D9D2C7" stroke-width="1.25"/>
+  <line x1="96" y1="148" x2="1104" y2="148" stroke="#D9D2C7" stroke-width="1.25"/>
+  <line x1="96" y1="474" x2="1104" y2="474" stroke="#D9D2C7" stroke-width="1.25"/>
+
+  <text x="96" y="118" font-family="Georgia, serif" font-size="28" font-weight="600" fill="#3A1515">Smyan Reddy</text>
+  <text x="1104" y="118" text-anchor="end" font-family="Menlo, Consolas, monospace" font-size="18" fill="#7A1F2B">ORCID 0009-0001-6068-7540</text>
+
+  <text x="96" y="252" font-family="Georgia, serif" font-size="62" font-weight="600" fill="#3A1515">Computational biology,</text>
+  <text x="96" y="324" font-family="Georgia, serif" font-size="62" font-weight="600" fill="#3A1515">built to be used.</text>
+
+  <text x="96" y="394" font-family="Georgia, serif" font-size="24" fill="#5A4F4F">Structural biology, genomics, modeling, and software for biotechnology.</text>
+  <text x="96" y="432" font-family="Menlo, Consolas, monospace" font-size="19" fill="#7A1F2B">Proposal for Lambert iGEM 2027: PENTA(mer)</text>
+
+  <text x="96" y="526" font-family="Georgia, serif" font-size="20" fill="#1B1414">Lambert High School, Class of 2029 | Suwanee, Georgia</text>
+  <text x="1104" y="526" text-anchor="end" font-family="Menlo, Consolas, monospace" font-size="18" fill="#5A4F4F">mathlete.world@gmail.com</text>
+</svg>

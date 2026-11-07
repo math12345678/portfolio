@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PENTA(mer): A Wash-Free Saliva Assay for Congenital Cytomegalovirus Screening | Smyan Reddy</title>
+  <meta name="description" content="Lambert High School iGEM Proposal by Smyan Reddy: PENTA(mer), a wash-free saliva assay for congenital cytomegalovirus screening driven by four integrated computational models.">
+  <meta name="author" content="Smyan Reddy">
+
+  <link rel="canonical" href="https://math12345678.github.io/portfolio/penta-mer/">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="PENTA(mer): A Wash-Free Saliva Assay for Congenital Cytomegalovirus Screening | Smyan Reddy">
+  <meta property="og:description" content="Lambert High School iGEM Proposal focusing on four integrated computational models for split-enzyme congenital CMV screening.">
+  <meta property="og:url" content="https://math12345678.github.io/portfolio/penta-mer/">
+  <meta property="og:image" content="https://math12345678.github.io/portfolio/og-image.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PENTA(mer): A Wash-Free Saliva Assay for Congenital Cytomegalovirus Screening | Smyan Reddy">
+  <meta name="twitter:description" content="Lambert High School iGEM Proposal focusing on four integrated computational models for split-enzyme congenital CMV screening.">
+  <meta name="twitter:image" content="https://math12345678.github.io/portfolio/og-image.svg">
+
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+
+  <!-- Apply saved theme preference before first paint -->
+  <script>
+    (function () {
+      try {
+        var saved = window.localStorage.getItem("sr-theme");
+        if (saved === "light" || saved === "dark") {
+          document.documentElement.setAttribute("data-theme", saved);
+        }
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- Google Fonts with preconnect and non-blocking swap -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,500;0,600;0,700;1,400;1,500&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&amp;display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,500;0,600;0,700;1,400;1,500&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&amp;display=swap" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,500;0,600;0,700;1,400;1,500&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&amp;display=swap">
+  </noscript>
+
+  <!-- Critical above-the-fold styles -->
+  <style id="critical-css">
+    :root{--paper:#FAF7F2;--paper-2:#F1ECE3;--ink:#1B1414;--ink-2:#5A4F4F;--rule:#D9D2C7;--maroon:#3A1515;--accent:#7A1F2B;--max-width:1120px;--measure:62ch;--gutter:clamp(1.25rem,4vw,2.5rem)}
+    @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#14100F;--paper-2:#1E1817;--ink:#EDE6DC;--ink-2:#B9AEA2;--rule:#342B29;--maroon:#F4EDE4;--accent:#D98B93}}
+    :root[data-theme="dark"]{--paper:#14100F;--paper-2:#1E1817;--ink:#EDE6DC;--ink-2:#B9AEA2;--rule:#342B29;--maroon:#F4EDE4;--accent:#D98B93}
+    *,*::before,*::after{box-sizing:border-box}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:"Source Serif 4",Georgia,serif;font-size:1.125rem;line-height:1.65}
+    .container{width:100%;max-width:var(--max-width);margin-inline:auto;padding-inline:var(--gutter)}
+  </style>
+  <link rel="stylesheet" href="../styles.css">
+
+  <!-- Structured data: Person (no phone number or street address) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Smyan Reddy",
+    "email": "mailto:mathlete.world@gmail.com",
+    "description": "Tenth-grade researcher, Lambert High School (Class of 2029), Suwanee, Georgia",
+    "affiliation": {
+      "@type": "EducationalOrganization",
+      "name": "Lambert High School"
+    },
+    "sameAs": [
+      "https://orcid.org/0009-0001-6068-7540",
+      "https://github.com/math12345678",
+      "https://www.linkedin.com/in/smyan-reddy/",
+      "https://independent.academia.edu/SmyanReddy",
+      "https://www.instagram.com/smyan.reddy/"
+    ],
+    "knowsAbout": [
+      "computational structural biology",
+      "molecular dynamics",
+      "genomics",
+      "synthetic biology",
+      "biostatistics"
+    ]
+  }
+  </script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="wordmark" href="../" data-bind="person.name">Smyan Reddy</a>
+      <nav aria-label="Primary">
+        <button id="nav-toggle" class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav-list">Menu</button>
+        <ul id="site-nav-list" class="nav-list">
+          <li><a href="../#work">Work</a></li>
+          <li><a href="#top" class="is-active" aria-current="page">PENTA(mer)</a></li>
+          <li><a href="../#research">Research</a></li>
+          <li><a href="../#skills">Skills</a></li>
+          <li><a href="../#writing">Writing</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- Proposal header -->
+    <section class="hero" aria-labelledby="brief-heading">
+      <div class="container grid-12">
+        <div class="hero-main">
+          <div class="brief-breadcrumb">
+            <a href="../">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true" focusable="false">
+                <path d="M13 8H3M7 4L3 8l4 4" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+              <span>Back to portfolio</span>
+            </a>
+          </div>
+
+          <p class="status-line" data-bind="pentamer.statusTag">Lambert High School iGEM Proposal</p>
+
+          <h1 id="brief-heading" data-bind="pentamer.title">PENTA(mer): A Wash-Free Saliva Assay for Congenital Cytomegalovirus Screening</h1>
+          <p class="hero-lead" data-bind="pentamer.abstractProblem">Congenital cytomegalovirus (cCMV) affects about 1 in 200 newborns in the United States, establishing itself as the primary non-genetic cause of sensorineural hearing loss. Most infected infants are asymptomatic at birth, causing standard screening to often miss children whose hearing loss appears later (Lutz et al., 2025; Fowler et al., 1997).</p>
+
+          <div class="hero-links">
+            <a class="text-action" href="#models">Computational models</a>
+            <a class="text-action" href="#problem-solution">The problem &amp; solution</a>
+            <a class="text-action" href="#hardware-hp">Hardware &amp; human practices</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 01: Computational Modeling Framework (Primary Focus) -->
+    <section id="models" class="section reveal-section" aria-labelledby="sec-brief-models">
+      <div class="container">
+        <div class="section-rule">
+          <div class="section-heading-group">
+            <span class="section-num">01</span>
+            <h2 id="sec-brief-models" class="section-title">Computational Modeling &amp; Assay Overview</h2>
+          </div>
+        </div>
+
+        <div class="pentamer-spread">
+          <div class="pentamer-prose">
+            <div class="prose-block">
+              <p data-bind="pentamer.abstractAssay">To help close this critical diagnostic gap, PENTA(mer) offers a wash-free saliva assay designed to spot the assembled human cytomegalovirus pentameric complex. This system consists of two single-chain variable fragments (scFvs) to bind epitopes on the complex, linking each arm to one half of a split TEM-1 &#946;-lactamase enzyme. When both fragments bind to the target, they reconstitute the enzyme to cleave nitrocefin, producing a rapid, visible color change.</p>
+            </div>
+
+            <div class="prose-block">
+              <p data-bind="pentamer.abstractReaderAndGoal">Furthermore, this system will measure color changes using a low-cost, open-source reader. Its software will incorporate signal processing, along with four computational models to predict binding kinetics, calibrate reader optics, test clinical feasibility, and verify binding geometry. Ultimately, PENTA(mer)&#8217;s goal is to bridge the gap between diagnostic technology and direct implementation, providing a low-cost screening tool to detect cCMV in infants.</p>
+            </div>
+
+            <div class="prose-block">
+              <p data-bind="pentamer.modelsValidation">All computational models will be validated against experimental benchmark data. Complete hardware designs will be open-sourced, and all software code will be available on the iGEM GitLab repository.</p>
+            </div>
+          </div>
+
+          <div class="pentamer-models-panel">
+            <h3 class="prose-subhead" data-bind="pentamer.modelsHeading">Computational models</h3>
+            <p data-bind="pentamer.modelsIntro">Assay engineering and validation will be driven by four integrated computational models:</p>
+
+            <ol class="model-list">
+              <li>
+                <span class="model-code"><span data-bind="pentamer.models.0.num">1</span>.</span>
+                <span data-bind="pentamer.models.0.text">A kinetic sensor model that predicts signal output, optimal scFv working concentrations, and background tolerance based on binding kinetics</span>
+              </li>
+              <li>
+                <span class="model-code"><span data-bind="pentamer.models.1.num">2</span>.</span>
+                <span data-bind="pentamer.models.1.text">A photometric calibration model utilizing four-parameter logistic (4PL) curve fitting to define the exact limit of detection and detect potential high-dose hook effects</span>
+              </li>
+              <li>
+                <span class="model-code"><span data-bind="pentamer.models.2.num">3</span>.</span>
+                <span data-bind="pentamer.models.2.text">A clinical feasibility model mapping expected newborn saliva viral loads to target pentamer concentration thresholds</span>
+              </li>
+              <li>
+                <span class="model-code"><span data-bind="pentamer.models.3.num">4</span>.</span>
+                <span data-bind="pentamer.models.3.text">A structural molecular dynamics model (built from PDB entries 5VOB, 7T4S, and 7M22) evaluating co-binding geometry, split-enzyme orientation, and flexible dynamics on the pentamer framework</span>
+              </li>
+            </ol>
+
+            <p class="models-note" data-bind="pentamer.modelsFramework">The modeling framework provides testable predictions across three core areas: scFv working concentration, dose-response curve shape, and limit of detection. Models will be iteratively refined against experimental bench data. The feasibility model independently evaluates the assay by comparing expected viral loads against quantified limits of detection, while other molecular dynamics simulations evaluate structural feasibility. All code will be fully open-source.</p>
+
+            <!-- TODO: Add computational modeling code and simulation outputs here when ready -->
+
+            <div class="pdb-row">
+              <span class="pdb-row-label">PDB entries:</span>
+              <ul class="pdb-list">
+                <li>
+                  <a class="pdb-link" href="https://www.rcsb.org/structure/5VOB" target="_blank" rel="noopener noreferrer" data-bind="pentamer.pdbStructures.0.id" data-bind-href="pentamer.pdbStructures.0.url">5VOB</a>
+                </li>
+                <li>
+                  <a class="pdb-link" href="https://www.rcsb.org/structure/7T4S" target="_blank" rel="noopener noreferrer" data-bind="pentamer.pdbStructures.1.id" data-bind-href="pentamer.pdbStructures.1.url">7T4S</a>
+                </li>
+                <li>
+                  <a class="pdb-link" href="https://www.rcsb.org/structure/7M22" target="_blank" rel="noopener noreferrer" data-bind="pentamer.pdbStructures.2.id" data-bind-href="pentamer.pdbStructures.2.url">7M22</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02: The Problem & The Solution -->
+    <section id="problem-solution" class="section reveal-section" aria-labelledby="sec-brief-problem">
+      <div class="container">
+        <div class="section-rule">
+          <div class="section-heading-group">
+            <span class="section-num">02</span>
+            <h2 id="sec-brief-problem" class="section-title">The Problem &amp; The Solution</h2>
+          </div>
+        </div>
+
+        <div class="brief-columns">
+          <div class="pentamer-prose">
+            <h3 class="prose-subhead">The Problem</h3>
+            <p data-bind="pentamer.problemFull1">Congenital Cytomegalovirus (cCMV) is the most common infectious cause of birth defects, affecting approximately 1 in 200 newborns, and the leading non-genetic cause of sensorineural hearing loss in the United States. The disease presents an unequal burden, with prevalence nearly doubling among infants of Black and Native American mothers, and highest in Southern states, which include Georgia (Lutz et al., 2025).</p>
+            <p data-bind="pentamer.problemFull2">A major challenge in controlling cCMV is that most infected infants appear completely asymptomatic at birth. Yet, some subsequently develop progressive sensorineural hearing loss. For example, in a cohort of 307 asymptomatic children, 22 developed sensorineural hearing loss, with half experiencing continuous deterioration throughout early childhood. Delayed onset occurred in 18.2% of these cases, at a median detection age of 27 months (Fowler et al., 1997). Current state policy mandates cCMV testing only for infants who fail their final newborn hearing screen (Georgia Department of Public Health, 2024). As a result, asymptomatic infants and those with late-onset hearing loss pass preliminary screening and return entirely undiagnosed.</p>
+            <p data-bind="pentamer.problemFull3">Prevention options remain severely limited. The leading universal vaccine candidate, mRNA-1647, which targets the pentameric complex, failed its pivotal Phase 3 primary efficacy endpoint in October 2025, demonstrating an efficacy of only 6% to 23% (Moderna, 2025). Therefore, early detection paired with targeted antiviral intervention represents a viable clinical strategy to combat hearing loss. While oral valganciclovir is recommended for symptomatic cCMV, it carries significant clinical risks, causing severe neutropenia in approximately 20% of treated infants due to bone marrow suppression (Kimberlin et al., 2015). A precise, rapid, and timely diagnosis is thus critical to ensure therapeutic benefits across rural, diverse populations.</p>
+          </div>
+
+          <div class="pentamer-prose">
+            <h3 class="prose-subhead">The Solution</h3>
+            <p data-bind="pentamer.solutionFull1">PENTA(mer) directly addresses this diagnostic gap by targeting the HCMV pentameric complex (gH/gL/UL128/UL130/UL131A), which allows for viral entry into human epithelial and endothelial cells and demonstrates a powerful neutralizing response. The assay uses two antibodies, 8I21 and 13H11, which bind to non-overlapping epitopes on the complex (Kschonsak et al., 2022). Each antibody will be engineered as a single-chain variable fragment (scFv) fused to one half of TEM-1 &#946;-lactamase split between residues 196 and 198 (Marsh &amp; Owen, 2025). Neither fragment contains enzymatic activity individually. However, when both scFv bind to the same assembled pentamer, the two halves are held together and the enzyme reforms. The restored enzyme cleaves nitrocefin, generating a color transition from yellow to red at 486 nm.</p>
+            <p data-bind="pentamer.solutionFull2">Rapid saliva tests already exist for cCMV. One notable one uses LAMP, which amplifies DNA (99.8% agreement with PCR), so it reports viral DNA from any source (Gantt et al., 2020). However, PENTA(mer) detects the antigen, which means that a direct signal requires an assembled pentamer, and amplification is not needed.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03: Hardware & Human Practices -->
+    <section id="hardware-hp" class="section reveal-section" aria-labelledby="sec-brief-hardware">
+      <div class="container">
+        <div class="section-rule">
+          <div class="section-heading-group">
+            <span class="section-num">03</span>
+            <h2 id="sec-brief-hardware" class="section-title">Hardware &amp; Human Practices</h2>
+          </div>
+        </div>
+
+        <div class="brief-columns">
+          <div class="pentamer-prose">
+            <h3 class="prose-subhead">Hardware</h3>
+            <p data-bind="pentamer.hardwareFull">To enable direct measurement without complex data collection, this project will design three hardware products, stratified based on price and LOD. The baseline model would consist of a 3D-printed dark box containing a phone camera and color reference card. The mid-tier unit would utilize an ESP32 microcontroller paired with an LED source and photodiode detector. This microcontroller would switch the LED on and off quickly and read the signal at that same rate, which negates room light and sensor drift when determining sensitivity. The advanced tier would incorporate a filtered LED to enable high-sensitivity fluorescence detection, integrated into a disposable cartridge designed to filter oral bacteria, concentrate virions, and hold a secondary reaction chamber, which corrects for background bacterial &#946;-lactamase activity. A handheld luminometer that uses mechanical shutters achieves high sensitivity but costs about $700 in materials, so developing an effective reader at a reduced cost threshold would substantially improve accessibility in underserved areas (Lebel et al., 2024).</p>
+          </div>
+
+          <div class="pentamer-prose">
+            <h3 class="prose-subhead">Human Practices</h3>
+            <p data-bind="pentamer.humanPracticesFull1">PENTA(mer) directly addresses a critical gap in Georgia&#8217;s neonatal screening framework. Under state policy enacted in 2024 within the Early Hearing Detection and Intervention (EHDI) program, facilities are required to test infants who fail their newborn hearing test. PENTA(mer) is designed to undergo clinical validation to support its adoption alongside existing diagnostic methods, such as PCR and saliva-based LAMP assays. Because EHDI is under the Georgia Department of Public Health, this includes it as the first stakeholder.</p>
+            <p data-bind="pentamer.humanPracticesFull2">This project will also involve the consultation of a pediatric audiologist, a clinician, and a parent of a child with cCMV. These individuals will be asked questions regarding testing methods used in neonatal care, certain guidelines and legislation denoting infant hearing tests, how to word results and tests properly to not strike fear in parents, and what price a clinic would accept. The audiologist and clinician will also be asked how a positive antigen result could connect to PCR and other methods used in testing.</p>
+            <p data-bind="pentamer.humanPracticesFull3">This campaign aims to inform legislation to expand statewide newborn hearing screening for cCMV. Additionally, this project will result in the development of a comprehensive guide for families going through a new diagnosis, alongside protocols to advise clinicians in underserved rural areas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04: Contact -->
+    <section id="contact" class="section reveal-section" aria-labelledby="sec-brief-contact">
+      <div class="container">
+        <div class="section-rule">
+          <div class="section-heading-group">
+            <span class="section-num">04</span>
+            <h2 class="section-title">Correspondence</h2>
+          </div>
+        </div>
+
+        <div class="contact-box">
+          <h3 id="sec-brief-contact" class="contact-heading" data-bind="contact.heading">Contact</h3>
+          <p data-bind="contact.sentence">For iGEM, research collaboration, or questions about PENTA(mer), email me.</p>
+
+          <div class="email-row">
+            <a class="email-link" href="mailto:mathlete.world@gmail.com" data-bind="person.email" data-bind-href="person.email" data-href-prefix="mailto:">mathlete.world@gmail.com</a>
+            <button id="copy-email-btn" class="copy-btn" type="button">Copy email</button>
+            <span id="copy-status" class="copy-status" role="status" aria-live="polite"></span>
+          </div>
+
+          <ul class="profile-links">
+            <li>
+              <a href="../">Back to full portfolio</a>
+            </li>
+            <li>
+              <a href="https://github.com/math12345678" target="_blank" rel="noopener noreferrer" data-bind-href="person.githubUrl">GitHub</a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/smyan-reddy/" target="_blank" rel="noopener noreferrer" data-bind-href="person.linkedinUrl">LinkedIn</a>
+            </li>
+            <li>
+              <a href="https://orcid.org/0009-0001-6068-7540" target="_blank" rel="noopener noreferrer" data-bind-href="person.orcidUrl">ORCID (0009-0001-6068-7540)</a>
+            </li>
+            <li>
+              <a href="https://independent.academia.edu/SmyanReddy" target="_blank" rel="noopener noreferrer" data-bind-href="person.academiaUrl">Academia.edu</a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/smyan.reddy/" target="_blank" rel="noopener noreferrer" data-bind-href="person.instagramUrl">Instagram</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span data-bind="person.locationAndUpdated">Smyan Reddy, Suwanee, Georgia. Last updated November 2026.</span>
+      <div class="theme-switch" role="group" aria-label="Color theme">
+        <button class="theme-btn" type="button" data-theme-choice="light" aria-pressed="false">Light</button>
+        <span aria-hidden="true">/</span>
+        <button class="theme-btn" type="button" data-theme-choice="dark" aria-pressed="false">Dark</button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../content.js" defer></script>
+  <script src="../main.js" defer></script>
+</body>
+</html>
