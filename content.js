@@ -70,92 +70,29 @@ window.SITE_CONTENT = {
     models: [
       {
         num: "1",
-        text: "A kinetic sensor model that predicts signal output, optimal scFv working concentrations, and background tolerance based on binding kinetics"
+        name: "Kinetic sensor model",
+        text: "Models the binding of both antibodies (8I21 and 13H11) to the epithelial-entry pentamer complex and uses Michaelis-Menten enzyme kinetics to predict signal output, optimal scFv working concentrations, and background tolerance."
       },
       {
         num: "2",
-        text: "A photometric calibration model utilizing four-parameter logistic (4PL) curve fitting to define the exact limit of detection and detect potential high-dose hook effects"
+        name: "Photometric calibration model",
+        text: "Uses a four-parameter logistic (4PL) sigmoid curve assigning probabilities between 0 and 1 to define the exact limit of detection and detect potential high-dose hook effects."
       },
       {
         num: "3",
-        text: "A clinical feasibility model mapping expected newborn saliva viral loads to target pentamer concentration thresholds"
+        name: "Clinical feasibility model",
+        text: "Uses SIR/SEIR modeling to measure the impact of the virus on the infant and viral load dynamics, mapping expected newborn saliva viral loads to target pentamer concentration thresholds."
       },
       {
         num: "4",
-        text: "A structural molecular dynamics model (built from PDB entries 5VOB, 7T4S, and 7M22) evaluating co-binding geometry, split-enzyme orientation, and flexible dynamics on the pentamer framework"
+        name: "Structural molecular dynamics model",
+        text: "Built from PDB entries 5VOB, 7T4S, and 7M22 and simulated in GROMACS to evaluate co-binding geometry, split-enzyme orientation, and flexible dynamics on the pentamer framework, calculating root mean square deviation (RMSD), root mean square fluctuation (RMSF), betweenness, eigenvector, and connectedness centralities, SASA, and radius of gyration."
       }
     ],
     modelsFramework:
       "The modeling framework provides testable predictions across three core areas: scFv working concentration, dose-response curve shape, and limit of detection. Models will be iteratively refined against experimental bench data. The feasibility model independently evaluates the assay by comparing expected viral loads against quantified limits of detection, while other molecular dynamics simulations evaluate structural feasibility. All code will be fully open-source.",
     modelsValidation:
       "All computational models will be validated against experimental benchmark data. Complete hardware designs will be open-sourced, and all software code will be available on the iGEM GitLab repository.",
-    modelsDepthHeading: "Computational modeling architecture",
-    modelsDepthLead:
-      "The four models form a coupled computational pipeline linking atomic-level construct geometry, mass-action reaction kinetics, microcontroller signal recovery, and clinical viral-load thresholds prior to wet-lab validation.",
-    modelsDeep: [
-      {
-        code: "MODEL 01",
-        title: "Kinetic sensor and ternary complementation model",
-        tag: "Mass-action ODEs + Michaelis-Menten turnover",
-        equation:
-          "P + A <-> PA,  P + B <-> PB,  PA + B <-> PAB\nv0 = kcat ([PAB] + [AB_bg]) [S] / (KM + [S])",
-        summary:
-          "Formulates coupled ordinary differential equations for bivalent binding of 8I21-scFv (A) and 13H11-scFv (B) fusion arms to non-overlapping epitopes on assembled HCMV pentamer (P = gH/gL/UL128/UL130/UL131A). Productive ternary assembly (PAB) reconstitutes TEM-1 \u03b2-lactamase split between residues 196 and 198 to hydrolyze nitrocefin at 486 nm, competing against concentration-dependent spontaneous fragment reassembly (A + B <-> AB_bg) and residual oral bacterial \u03b2-lactamase activity.",
-        inputs:
-          "Inputs: scFv-pentamer association and dissociation constants (kon, koff), split TEM-1 complementation rates, nitrocefin catalytic constants (kcat, KM), and single-arm baseline rates.",
-        outputs:
-          "Outputs: optimal [8I21-scFv] and [13H11-scFv] working concentrations maximizing the target 10-fold signal-to-background ratio, predicted absorbance velocity curves, and quantitative criteria for retaining the 196/198 split site versus switching to the lower-background 63/64 split site.",
-        validation:
-          "Bench coupling: parameterized against mock-virion Experiment 1 (single-arm baseline without antigen) and Experiment 2 (dual-scFv complementation on pentamer-coated beads in synthetic saliva)."
-      },
-      {
-        code: "MODEL 02",
-        title: "Digital lock-in demodulation and 4PL calibration model",
-        tag: "Synchronous ESP32 signal recovery + 4PL regression",
-        equation:
-          "R = sqrt(LPF{V(t) sin(2 pi f0 t)}^2 + LPF{V(t) cos(2 pi f0 t)}^2)\ny(x) = d + (a - d) / (1 + (x / c)^b)",
-        summary:
-          "Models the optical signal chain on the ESP32 LED-photodiode reader alongside dose-response calibration. Synchronous digital lock-in detection multiplies the raw photodiode signal V(t) at carrier frequency f0 by in-phase and quadrature references to reject ambient room light and low-frequency sensor drift, followed by dual-chamber rate subtraction to remove endogenous bacterial \u03b2-lactamase turnover. Background-corrected velocities across antigen dilutions are fit with a four-parameter logistic (4PL) function while comparing initial kinetic slopes against endpoint absorbance to flag high-dose prozone (hook) effects where excess pentamer partitions scFv arms onto separate complexes (PA and PB).",
-        inputs:
-          "Inputs: modulated photodiode time-series V(t), reference-chamber bacterial background trace, and serial mock-virion titration standards.",
-        outputs:
-          "Outputs: drift-corrected 486 nm reaction rates, 4PL parameter estimates (baseline a, Hill slope b, EC50 c, upper asymptote d), formal analytical limit of detection (blank mean plus 3 SD inverted through the 4PL curve), and automated high-dose hook-effect flags.",
-        validation:
-          "Bench coupling: calibrated against mock-virion Experiment 5 (serial titration protocols defining analytical LOD) and Experiment 6 (filtered versus unfiltered saliva bacterial \u03b2-lactamase comparison)."
-      },
-      {
-        code: "MODEL 03",
-        title: "Clinical saliva viral-load feasibility model",
-        tag: "Stoichiometric conversion + Monte Carlo sensitivity",
-        equation:
-          "[P]_saliva = (C_viral * eta_virion * n_pentamer * alpha_conc) / (N_A * 10^-3)\nP_detect = Pr([P]_saliva >= LOD_tier)",
-        summary:
-          "Bridges bench analytical sensitivity and neonatal clinical screening by mapping published newborn cCMV saliva viral-load distributions (copies/mL) into molar concentrations of intact pentamer ([P]_saliva). Propagates parameter uncertainty via Monte Carlo sampling across virion-to-genome particle ratios (eta_virion), surface pentamer copy number per virion envelope (n_pentamer), and sample pre-treatment or disposable-cartridge virion concentration factors (alpha_conc).",
-        inputs:
-          "Inputs: neonatal saliva viral-load distributions, virion envelope stoichiometry priors, filtration recovery factors, and quantified LOD values from Model 2.",
-        outputs:
-          "Outputs: predicted fraction of cCMV-positive newborn saliva specimens detectable across each reader tier (smartphone dark box, ESP32 lock-in photodiode unit, and filtered-LED fluorescence reader), establishing explicit decision thresholds for switching from colorimetric nitrocefin to fluorogenic CCF2.",
-        validation:
-          "Bench coupling: independently evaluates whether the experimentally measured mock-virion LOD is sufficient for newborn saliva screening before clinical workflow integration."
-      },
-      {
-        code: "MODEL 04",
-        title: "Structural co-binding and all-atom molecular dynamics model",
-        tag: "PDB 5VOB, 7T4S, 7M22 + explicit-solvent MD",
-        equation:
-          "Align(5VOB, 7T4S, 7M22) -> scFv(8I21, 13H11) + (GGGGS)3 + TEM-1(196/198)\nMD readouts -> RMSD, RMSF, d_split, theta",
-        summary:
-          "Constructs three-dimensional atomic models of the ternary sensor complex by superimposing experimental HCMV pentamer structures: crystal structure 5VOB (Chandramouli et al., 2017), neutralizing antibody cryo-EM structure 7T4S defining non-overlapping 8I21 and 13H11 epitopes (Kschonsak et al., 2022), and neuropilin-2 receptor complex 7M22 (Wrapp et al., 2022). Models flexible glycine-serine linkers connecting the 8I21 and 13H11 scFv termini to split TEM-1 \u03b2-lactamase fragments (196/198) and runs explicit-solvent all-atom molecular dynamics simulations to evaluate conformational reach and steric compatibility on the assembled pentamer.",
-        inputs:
-          "Inputs: atomic coordinates from PDB entries 5VOB, 7T4S, and 7M22, 8I21 and 13H11 scFv sequences, glycine-serine linker lengths, and TEM-1 split-fragment coordinates.",
-        outputs:
-          "Outputs: inter-epitope span and steric clash diagnostics against gH/gL/UL128/UL130/UL131A subunits, linker end-to-end distance distributions, split-interface proximity (d_split) and orientation (theta) ensembles, and minimum linker-length requirements for productive enzyme reconstitution.",
-        validation:
-          "Bench coupling: tested alongside mock-virion Experiment 3 (specificity against gH/gL dimers and gH/gL/gO trimers) and Experiment 4 (soluble NRP2 receptor binding competition)."
-      }
-    ],
-    modelsPipelineNote:
-      "Integrated parameter flow: Structural MD (Model 4) constrains linker geometry and confirms physical co-binding feasibility -> Kinetic ODEs (Model 1) set scFv working concentrations and split-site background bounds -> Lock-in and 4PL software (Model 2) converts raw ESP32 optical traces into calibrated concentrations, LODs, and hook-effect flags -> Clinical feasibility mapping (Model 3) tests calibrated LODs against newborn saliva viral-load thresholds.",
     pdbStructures: [
       { id: "5VOB", url: "https://www.rcsb.org/structure/5VOB" },
       { id: "7T4S", url: "https://www.rcsb.org/structure/7T4S" },
@@ -253,7 +190,8 @@ window.SITE_CONTENT = {
         "Responsible for GWAS quality control, post-GWAS analysis, and Genomic Structural Equation Modeling across traits."
       ],
       figures: [
-        "Histogram of per-individual genotype missingness in GWAS sample quality control (0.010 exclusion threshold)."
+        "Histogram of per-individual genotype missingness in GWAS sample quality control (0.010 exclusion threshold).",
+        "Manhattan plot of genome-wide association results across chromosomes."
       ]
     },
     {
