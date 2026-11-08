@@ -230,13 +230,73 @@
 
             <p class="pentamer-brief-cta">
               <a class="text-action" href="penta-mer/">
-                <span>Read the full PENTA(mer) proposal</span>
+                <span>Read the full PENTA(mer) proposal &amp; modeling specifications</span>
                 <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false">
                   <path d="M3 8h10M9 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"></path>
                 </svg>
               </a>
             </p>
           </div>
+        </div>
+
+        <!-- Deep-dive computational modeling architecture -->
+        <div class="models-depth-block">
+          <div class="models-depth-header">
+            <h4 class="prose-subhead" data-bind="pentamer.modelsDepthHeading">Computational modeling architecture</h4>
+            <p class="models-depth-lead" data-bind="pentamer.modelsDepthLead">The four models form a coupled computational pipeline linking atomic-level construct geometry, mass-action reaction kinetics, microcontroller signal recovery, and clinical viral-load thresholds prior to wet-lab validation.</p>
+          </div>
+
+          <div class="models-depth-grid">
+            <article class="model-depth-cell">
+              <div class="model-cell-top">
+                <span class="model-cell-code" data-bind="pentamer.modelsDeep.0.code">MODEL 01</span>
+                <span class="model-cell-tag" data-bind="pentamer.modelsDeep.0.tag">Mass-action ODEs + Michaelis-Menten turnover</span>
+              </div>
+              <h5 class="model-cell-title" data-bind="pentamer.modelsDeep.0.title">Kinetic sensor and ternary complementation model</h5>
+              <pre class="model-eq"><code data-bind="pentamer.modelsDeep.0.equation">P + A &lt;-&gt; PA,  P + B &lt;-&gt; PB,  PA + B &lt;-&gt; PAB
+v0 = kcat ([PAB] + [AB_bg]) [S] / (KM + [S])</code></pre>
+              <p class="model-cell-summary" data-bind="pentamer.modelsDeep.0.summary">Formulates coupled ordinary differential equations for bivalent binding of 8I21-scFv (A) and 13H11-scFv (B) fusion arms to non-overlapping epitopes on assembled HCMV pentamer (P = gH/gL/UL128/UL130/UL131A). Productive ternary assembly (PAB) reconstitutes TEM-1 &#946;-lactamase split between residues 196 and 198 to hydrolyze nitrocefin at 486 nm, competing against concentration-dependent spontaneous fragment reassembly (A + B &lt;-&gt; AB_bg) and residual oral bacterial &#946;-lactamase activity.</p>
+              <p class="model-cell-meta" data-bind="pentamer.modelsDeep.0.outputs">Outputs: optimal [8I21-scFv] and [13H11-scFv] working concentrations maximizing the target 10-fold signal-to-background ratio, predicted absorbance velocity curves, and quantitative criteria for retaining the 196/198 split site versus switching to the lower-background 63/64 split site.</p>
+            </article>
+
+            <article class="model-depth-cell">
+              <div class="model-cell-top">
+                <span class="model-cell-code" data-bind="pentamer.modelsDeep.1.code">MODEL 02</span>
+                <span class="model-cell-tag" data-bind="pentamer.modelsDeep.1.tag">Synchronous ESP32 signal recovery + 4PL regression</span>
+              </div>
+              <h5 class="model-cell-title" data-bind="pentamer.modelsDeep.1.title">Digital lock-in demodulation and 4PL calibration model</h5>
+              <pre class="model-eq"><code data-bind="pentamer.modelsDeep.1.equation">R = sqrt(LPF{V(t) sin(2 pi f0 t)}^2 + LPF{V(t) cos(2 pi f0 t)}^2)
+y(x) = d + (a - d) / (1 + (x / c)^b)</code></pre>
+              <p class="model-cell-summary" data-bind="pentamer.modelsDeep.1.summary">Models the optical signal chain on the ESP32 LED-photodiode reader alongside dose-response calibration. Synchronous digital lock-in detection multiplies the raw photodiode signal V(t) at carrier frequency f0 by in-phase and quadrature references to reject ambient room light and low-frequency sensor drift, followed by dual-chamber rate subtraction to remove endogenous bacterial &#946;-lactamase turnover. Background-corrected velocities across antigen dilutions are fit with a four-parameter logistic (4PL) function while comparing initial kinetic slopes against endpoint absorbance to flag high-dose prozone (hook) effects where excess pentamer partitions scFv arms onto separate complexes (PA and PB).</p>
+              <p class="model-cell-meta" data-bind="pentamer.modelsDeep.1.outputs">Outputs: drift-corrected 486 nm reaction rates, 4PL parameter estimates (baseline a, Hill slope b, EC50 c, upper asymptote d), formal analytical limit of detection (blank mean plus 3 SD inverted through the 4PL curve), and automated high-dose hook-effect flags.</p>
+            </article>
+
+            <article class="model-depth-cell">
+              <div class="model-cell-top">
+                <span class="model-cell-code" data-bind="pentamer.modelsDeep.2.code">MODEL 03</span>
+                <span class="model-cell-tag" data-bind="pentamer.modelsDeep.2.tag">Stoichiometric conversion + Monte Carlo sensitivity</span>
+              </div>
+              <h5 class="model-cell-title" data-bind="pentamer.modelsDeep.2.title">Clinical saliva viral-load feasibility model</h5>
+              <pre class="model-eq"><code data-bind="pentamer.modelsDeep.2.equation">[P]_saliva = (C_viral * eta_virion * n_pentamer * alpha_conc) / (N_A * 10^-3)
+P_detect = Pr([P]_saliva &gt;= LOD_tier)</code></pre>
+              <p class="model-cell-summary" data-bind="pentamer.modelsDeep.2.summary">Bridges bench analytical sensitivity and neonatal clinical screening by mapping published newborn cCMV saliva viral-load distributions (copies/mL) into molar concentrations of intact pentamer ([P]_saliva). Propagates parameter uncertainty via Monte Carlo sampling across virion-to-genome particle ratios (eta_virion), surface pentamer copy number per virion envelope (n_pentamer), and sample pre-treatment or disposable-cartridge virion concentration factors (alpha_conc).</p>
+              <p class="model-cell-meta" data-bind="pentamer.modelsDeep.2.outputs">Outputs: predicted fraction of cCMV-positive newborn saliva specimens detectable across each reader tier (smartphone dark box, ESP32 lock-in photodiode unit, and filtered-LED fluorescence reader), establishing explicit decision thresholds for switching from colorimetric nitrocefin to fluorogenic CCF2.</p>
+            </article>
+
+            <article class="model-depth-cell">
+              <div class="model-cell-top">
+                <span class="model-cell-code" data-bind="pentamer.modelsDeep.3.code">MODEL 04</span>
+                <span class="model-cell-tag" data-bind="pentamer.modelsDeep.3.tag">PDB 5VOB, 7T4S, 7M22 + explicit-solvent MD</span>
+              </div>
+              <h5 class="model-cell-title" data-bind="pentamer.modelsDeep.3.title">Structural co-binding and all-atom molecular dynamics model</h5>
+              <pre class="model-eq"><code data-bind="pentamer.modelsDeep.3.equation">Align(5VOB, 7T4S, 7M22) -&gt; scFv(8I21, 13H11) + (GGGGS)3 + TEM-1(196/198)
+MD readouts -&gt; RMSD, RMSF, d_split, theta</code></pre>
+              <p class="model-cell-summary" data-bind="pentamer.modelsDeep.3.summary">Constructs three-dimensional atomic models of the ternary sensor complex by superimposing experimental HCMV pentamer structures: crystal structure 5VOB (Chandramouli et al., 2017), neutralizing antibody cryo-EM structure 7T4S defining non-overlapping 8I21 and 13H11 epitopes (Kschonsak et al., 2022), and neuropilin-2 receptor complex 7M22 (Wrapp et al., 2022). Models flexible glycine-serine linkers connecting the 8I21 and 13H11 scFv termini to split TEM-1 &#946;-lactamase fragments (196/198) and runs explicit-solvent all-atom molecular dynamics simulations to evaluate conformational reach and steric compatibility on the assembled pentamer.</p>
+              <p class="model-cell-meta" data-bind="pentamer.modelsDeep.3.outputs">Outputs: inter-epitope span and steric clash diagnostics against gH/gL/UL128/UL130/UL131A subunits, linker end-to-end distance distributions, split-interface proximity (d_split) and orientation (theta) ensembles, and minimum linker-length requirements for productive enzyme reconstitution.</p>
+            </article>
+          </div>
+
+          <p class="models-pipeline-bar" data-bind="pentamer.modelsPipelineNote">Integrated parameter flow: Structural MD (Model 4) constrains linker geometry and confirms physical co-binding feasibility -&gt; Kinetic ODEs (Model 1) set scFv working concentrations and split-site background bounds -&gt; Lock-in and 4PL software (Model 2) converts raw ESP32 optical traces into calibrated concentrations, LODs, and hook-effect flags -&gt; Clinical feasibility mapping (Model 3) tests calibrated LODs against newborn saliva viral-load thresholds.</p>
         </div>
       </div>
     </section>
@@ -403,6 +463,15 @@
                 <li data-bind="work.4.bullets.0">Running genome-wide association analysis of anthropometric traits on Million Veteran Program summary statistics.</li>
                 <li data-bind="work.4.bullets.1">Responsible for GWAS quality control, post-GWAS analysis, and Genomic Structural Equation Modeling across traits.</li>
               </ul>
+            </div>
+
+            <div class="entry-figures">
+              <figure class="portfolio-figure portfolio-figure--compact">
+                <div class="figure-media">
+                  <img src="assets/figures/qmul-individual-missingness.webp" width="1014" height="1014" loading="lazy" decoding="async" alt="Histogram of proportion missing per individual from 0.000 to 0.020 with a vertical red dashed quality-control threshold at 0.010">
+                </div>
+                <figcaption data-bind="work.4.figures.0">Histogram of per-individual genotype missingness in GWAS sample quality control (0.010 exclusion threshold).</figcaption>
+              </figure>
             </div>
           </li>
 
